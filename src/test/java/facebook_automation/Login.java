@@ -17,8 +17,9 @@ public class Login {
 	   driver.get("https://www.facebook.com");
 	   driver.manage().window().maximize();
 	   //System.out.println(driver.getTitle());
-	  
+	  try{
 	   WebElement search= driver.findElement(By.name("email"));
+	  // setElementConverter(org.openqa.selenium.remote.internal.JsonToWebElementConverter converter);
 	   search.sendKeys("dpcindrella16@gmail.com");
 	   WebElement password=driver.findElement(By.id("pass"));
 	   password.sendKeys("kiranlove<3");
@@ -26,10 +27,19 @@ public class Login {
 	   // search.sendKeys("facebook");
 	   // driver.findElement(By.name("email")).click
       WebElement logout= driver.findElement(By.linkText("Log Out"));
-	   logout.click();
-	System.out.println(logout.getAttribute("value"));
+	   logout.click();}
+	  catch(Exception e){
+		  e.printStackTrace();
+		  System.out.println("there is an exception");
+	  }
+	  finally{
+		  
+		  System.out.println("resulted in error");
+	  }
+	  
+	/*System.out.println(logout.getAttribute("value"));
 	System.out.println(logout.getText());
-	System.out.println(logout.getSize());
+	System.out.println(logout.getSize());*/
 	driver.close();
 	}
 }
