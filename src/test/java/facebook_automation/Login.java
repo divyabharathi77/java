@@ -40,6 +40,7 @@ public class Login {
 	/*System.out.println(logout.getAttribute("value"));
 	System.out.println(logout.getText());
 	System.out.println(logout.getSize());*/
+	 System.out.println(" build successful");
 	driver.close();
 	}
 }
