@@ -41,6 +41,7 @@ public class Login {
 	System.out.println(logout.getText());
 	System.out.println(logout.getSize());*/
 	 System.out.println(" build successful");
+	 System.out.println(" github-jenkins integration");
 	driver.close();
 	}
 }
